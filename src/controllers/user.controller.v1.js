@@ -13,7 +13,7 @@ const get = async function(req, res, next){
                 response.success = false
                 return res.status(500).json(response)
             }
-            if(!users || users.length >= 0){
+            if(!users || users.length <= 0){
                 response.message = "No existen usuarios"
                 response.data = null
                 response.success = false
@@ -98,14 +98,14 @@ const add = async function(req, res){
             }
 
             _user.save(function(err, newUser){
-                console.log(err)
+
                 if(err){
                     response.message = "Error al crear usuario"
                     response.data = null
                     response.success = false
                     return res.status(500).json(response)
                 }
-                console.log(newUser)
+
                 if(!newUser){
                     response.message = "No se pudo crear el usuario"
                     response.data = null
