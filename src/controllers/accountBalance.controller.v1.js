@@ -41,7 +41,6 @@ const add = async function(req, res){
     try{
 
         const {concept, spent, income} = req.body
-        hashedPassword = await encrypt.hash(password)
         
         _accountBalance.createdDate = Date.now()
         _accountBalance.concept = concept
