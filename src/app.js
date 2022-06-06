@@ -7,7 +7,7 @@ const routes = require("./routes")
 const app = express()
 env.config()
 
-const port = process.env.SERVE_PORT ?? 3000
+const port = process.env.PORT ?? 3000
 const db = process.env.DB_SERVE
 const dbName = process.env.DB_NAME
 
