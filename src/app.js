@@ -3,6 +3,7 @@
 const express = require('express')
 const env = require("dotenv")
 const routes = require("./routes")
+const cors = require('cors')
 
 const app = express()
 env.config()
@@ -16,6 +17,7 @@ app.set('dbName', dbName)
 app.set('port', port)
 
 app.use(express.json())
+app.use(cors({origin: '*'}))
 
 
 routes(app)
