@@ -6,6 +6,7 @@ const accountBalanceRoute = require('./accountBalance')
 const routes = (app)=>{
     userRoute(app)
     accountBalanceRoute(app)
+
 }
 
 module.exports = routes

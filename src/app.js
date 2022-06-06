@@ -17,5 +17,9 @@ app.set('port', port)
 
 app.use(express.json())
 
+
 routes(app)
+
+app.get('/api', (req, res)=> res.send("Api Online") )
+
 module.exports = app
