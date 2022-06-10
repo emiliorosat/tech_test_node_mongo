@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const schema = mongoose.Schema
 
 const accountBalanceSchema = schema({
-    createdDate: {
+    date: {
         type: Date,
         required: true
     },
