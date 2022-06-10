@@ -40,9 +40,9 @@ const add = async function(req, res){
 
     try{
 
-        const {concept, spent, income, createdDate} = req.body
+        const {concept, spent, income, date} = req.body
         
-        _accountBalance.createdDate = createdDate
+        _accountBalance.date = date
         _accountBalance.concept = concept
         _accountBalance.spent = spent
         _accountBalance.income = income
