@@ -5,7 +5,7 @@ const schema = mongoose.Schema
 
 const accountBalanceSchema = schema({
     createdDate: {
-        type: String,
+        type: Date,
         required: true
     },
     concept: {
